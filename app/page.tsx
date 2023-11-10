@@ -7,7 +7,6 @@ import Quote from './components/Quote';
 import SearchBar from './components/SearchBar';
 
 const Home: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
-  ({ initialQuote }) => {
   const [quote, setQuote] = useState(initialQuote);
 
   const fetchRandomQuote = async () => {
@@ -18,8 +17,7 @@ const Home: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
       }
 
       const data = await response.json();
-      console.log('Random Quote API Response:', data); // Log the API response data
-
+      console.log('Random Quote API Response:', data);
       setQuote(data);
     } catch (error) {
       console.error('Error fetching random quote:', error);
@@ -35,13 +33,10 @@ const Home: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
       }
 
       const data = await response.json();
-      console.log('Search API Response:', data); // Log the API response data
+      console.log('Search API Response:', data);
       const randomIndex = Math.floor(Math.random() * data.length);
       const randomQuote = data[randomIndex];
-      // setQuote(randomQuote);
-      // Handle the response data as needed
-      // For example, update quote state based on the search results
-      setQuote(data.results[0]); // Assuming you want to display the first search result
+      setQuote(randomQuote);
     } catch (error) {
       console.error('Error searching quotes:', error);
     }
@@ -62,6 +57,6 @@ const Home: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
       </main>
     </div>
   );
-}
 };
+
 export default Home;
