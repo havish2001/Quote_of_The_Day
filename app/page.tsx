@@ -6,7 +6,11 @@ import './globals.css';
 import Quote from './components/Quote';
 import SearchBar from './components/SearchBar';
 
-const Page: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
+interface HomeProps {
+  initialQuote: any; // Define the type of initialQuote
+}
+
+const Home: React.FC<HomeProps> = ({ initialQuote }) => {
   const [quote, setQuote] = useState(initialQuote);
 
   const fetchRandomQuote = async () => {
