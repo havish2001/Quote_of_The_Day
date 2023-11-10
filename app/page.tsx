@@ -6,7 +6,7 @@ import './globals.css';
 import Quote from './components/Quote';
 import SearchBar from './components/SearchBar';
 
-export default function Home({ initialQuote }) {
+export default function Home({ initialQuote:any; }) {
   const [quote, setQuote] = useState(initialQuote);
 
   const fetchRandomQuote = async () => {
