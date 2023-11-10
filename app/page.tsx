@@ -6,7 +6,7 @@ import './globals.css';
 import Quote from './components/Quote';
 import SearchBar from './components/SearchBar';
 
-const Home: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
+const Page: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
   const [quote, setQuote] = useState(initialQuote);
 
   const fetchRandomQuote = async () => {
@@ -59,4 +59,4 @@ const Home: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
   );
 };
 
-export default Home;
+export default Page;
