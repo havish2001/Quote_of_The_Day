@@ -63,4 +63,4 @@ const Home: React.FC<HomeProps> = ({ initialQuote }) => {
   );
 };
 
-export default Page;
+export default Home;
