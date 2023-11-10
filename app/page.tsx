@@ -7,6 +7,7 @@ import Quote from './components/Quote';
 import SearchBar from './components/SearchBar';
 
 const Home: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
+  ({ initialQuote }) => {
   const [quote, setQuote] = useState(initialQuote);
 
   const fetchRandomQuote = async () => {
@@ -62,4 +63,5 @@ const Home: React.FC<{ initialQuote: any }> = ({ initialQuote }) => {
     </div>
   );
 }
+};
 export default Home;
